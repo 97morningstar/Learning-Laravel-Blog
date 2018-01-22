@@ -56,11 +56,12 @@ class UsersController extends Controller
      */
     public function store(CreateUserRequest $request)
     {
+        return redirect()->route('/');
 
         $user = User::create( $request->all() );
-         dd($request->roles);
+
         $user->roles()->attach($request->roles);
-       
+
 
         return redirect()->route('usuarios.index');
     }
