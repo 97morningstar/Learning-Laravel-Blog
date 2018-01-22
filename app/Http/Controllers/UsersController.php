@@ -59,6 +59,7 @@ class UsersController extends Controller
         $user = User::create( $request->all() );
         $user->roles()->attach($request->roles);
 
+dd($user);
         return redirect()->route('usuarios.index');
     }
 
