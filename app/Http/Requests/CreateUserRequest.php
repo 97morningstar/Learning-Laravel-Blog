@@ -25,7 +25,7 @@ class CreateUserRequest extends FormRequest
     {
         return [
              'name' => 'required',
-           //  'email' => 'required|email|unique:users,email,'.$this->route('usuario'),
+           //  'email' => 'required|email|unique:users,email,'.$this->route('usuario'), no recuerd para que era esto
              'email' => 'required|email|unique:users,email',
              'password' => 'required|confirmed', // 'field' === 'field_confirmation'
              'roles' => 'required',
